@@ -19,6 +19,23 @@ public class AllureTests {
             assertEquals(8, result);
         }
 
+    @Test
+    @Story("Умножение двух чисел")
+    @DisplayName("Проверка умножения")
+    @Description("Проверяем, что калькулятор правильно умножает числа")
+    void multipliTest() {
+
+        int result = multipliNumbers(2, 3);
+
+        attachLog(2,3,result);
+        assertEquals(6, result);
+    }
+
+    @Step("Умножение числа {first} и {second}")
+    int multipliNumbers(int first, int second) {
+        return first * second;
+    }
+
         @Step("Складываем числа {first} и {second}")
         int addNumbers(int first, int second) {
             return first + second;
@@ -33,6 +50,7 @@ public class AllureTests {
 
             assertEquals(10, result);
         }
+
 
     @Attachment(
             value = "Лог вычисления",
