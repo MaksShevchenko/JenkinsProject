@@ -28,7 +28,7 @@ public class AllureTests {
         int result = multipliNumbers(2, 3);
 
         attachLog(2,3,result);
-        assertEquals(6, result);
+        assertEquals(4, result);
     }
 
     @Step("Умножение числа {first} и {second}")
